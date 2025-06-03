@@ -6,6 +6,7 @@ import Yoga from "./pages/Yoga/Yoga";
 import PoseLibrary from "./pages/PoseLibrary";
 import Layout from "./components/Layout";
 import YogaCanvas from "./pages/Yoga/YogaCanvas";
+// import Profile from "./pages/Profile";
 
 import "./App.css";
 

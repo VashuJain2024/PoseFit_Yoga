@@ -1,0 +1,98 @@
+.instructions-list {
+  width: 40%;
+  border-radius: 8px;
+  padding: 10px;
+  color: black;
+  list-style-type: disc;
+}
+
+.instructions-list> :first-child {
+  font-size: 2rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.instruction {
+  margin: 5px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.instructions-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.button-container-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.secondary-btn-link {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin: 10px auto 10px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-color: rgba(125, 125, 125, 0.5);
+  border-width: 5px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 0px 0px;
+  color: black;
+}
+
+.secondary-btn-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.secondary-btn-link:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.secondary-btn-link:hover a {
+  color: black;
+}
+
+.pose-demo-img {
+  height: 400px;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1030px) {
+  .pose-demo-img {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .instructions-list {
+    width: 60%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .instructions-container {
+    flex-direction: column-reverse;
+  }
+
+  .instructions-list {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 20px;
+  }
+
+  .pose-demo-img {
+    margin-top: 20px;
+  }
+}

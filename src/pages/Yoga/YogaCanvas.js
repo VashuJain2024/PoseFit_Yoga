@@ -1,8 +1,7 @@
 import * as poseDetection from "@tensorflow-models/pose-detection";
 import * as tf from "@tensorflow/tfjs";
 import { useRef, useEffect, useContext } from "react";
-import YogaContext from "../../YogaContext";
-import { poseImages } from "../../utils/pose_images";
+import YogaContext from "../../YogaContext"; 
 import { POINTS, keypointConnections } from "../../utils/data";
 import { drawPoint, drawSegment } from "../../utils/helper";
 import Webcam from "react-webcam";
@@ -10,6 +9,7 @@ import { count } from "../../utils/music";
 import { Link } from "react-router-dom";
 import "./Yoga.css";
 import "./YogaCanvas.css";
+import { usePoseStore } from '../../store/poseStore';
 
 // flag variable is used to help capture the time when AI just detect
 // the pose as correct(probability more than threshold)
@@ -26,12 +26,16 @@ function YogaCanvas() {
     startingTime,
     startingTimefunc,
     currentTime,
-    currentTimefunc, 
+    currentTimefunc,
     poseTimefunc,
+    poseTime,
     bestPerform,
     bestPerformfunc,
     currentPose,
   } = useContext(YogaContext);
+  const { poses } = usePoseStore();
+
+  const pose = poses.filter(pose => pose.name === currentPose);
 
   useEffect(() => {
     const timeDiff = (currentTime - startingTime) / 1000;
@@ -226,13 +230,13 @@ function YogaCanvas() {
       <div className="yoga-pose-container">
         <div className="performance-container">
           <div className="pose-performance">
-            {/* <h4>Pose Time: {poseTime} s</h4> */}
+            <h4>Pose Time : {poseTime} s</h4>
           </div>
           <div className="pose-performance">
-            <h4>Best: {bestPerform} s</h4>
+            <h4>Best Time : {bestPerform} s</h4>
           </div>
           <button onClick={stopPose} className="secondary-btn">
-            <Link to="/start">Stop Pose</Link>
+            <Link to="/practice">Stop Pose</Link>
           </button>
         </div>
         <div className="pose-detection">
@@ -254,7 +258,7 @@ function YogaCanvas() {
           </div>
 
           <div className="pose-img" >
-            <img src={poseImages[currentPose]} alt="poses" />
+            <img src={pose[0].imageUrl} alt={pose[0].name} />
           </div>
         </div>
       </div>

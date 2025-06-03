@@ -4,35 +4,7 @@ export const usePoseStore = create((set, get) => ({
   poses: [
     {
       id: "1",
-      name: "Warrior II",
-      category: "Standing",
-      description:
-        "A powerful standing pose that builds strength and stability.",
-      difficulty: "beginner",
-      instructions: [
-        "Stand with feet wide apart",
-        "Turn right foot out 90 degrees, left foot slightly in",
-        "Bend right knee over right ankle",
-        "Extend arms parallel to floor, palms down",
-        "Gaze over right hand, hold for 30 seconds",
-      ],
-      benefits: [
-        "Strengthens legs, ankles, and feet",
-        "Opens hips and chest",
-        "Improves concentration and balance",
-        "Stimulates abdominal organs",
-      ],
-      imageUrl:
-        "https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg",
-      angles: {
-        left_knee_angle: [80, 100],
-        left_elbow_angle: [160, 180],
-        right_elbow_angle: [160, 180],
-      },
-    },
-    {
-      id: "2",
-      name: "Tree Pose",
+      name: "Tree",
       category: "Standing",
       description: "A balancing pose that improves focus and stability.",
       difficulty: "beginner",
@@ -50,15 +22,40 @@ export const usePoseStore = create((set, get) => ({
         "Enhances concentration and focus",
       ],
       imageUrl:
-        "https://images.pexels.com/photos/6787202/pexels-photo-6787202.jpeg",
+        "https://cdn.prod.website-files.com/61384703bca2db472ca04cfa/65166404fa404f0e059fa402_HowToDoTreePose.jpg",
       angles: {
         left_knee_angle: [30, 70],
         right_knee_angle: [160, 180],
       },
     },
     {
+      id: "2",
+      name: "Chair",
+      category: "Standing",
+      description: "A powerful standing pose that builds strength and stamina in the lower body while enhancing balance and focus.",
+      difficulty: "intermediate",
+      instructions: [
+        "Stand straight with feet together and arms at your sides",
+        "Inhale and raise your arms overhead, keeping them parallel or palms together",
+        "Exhale and bend your knees, lowering your hips as if sitting in a chair",
+        "Keep your back straight and chest lifted",
+        "Hold the pose for 20-30 seconds while breathing steadily, then slowly rise back up"
+      ],
+      benefits: [
+        "Strengthens thighs, calves, and spine",
+        "Tones the shoulders and arms",
+        "Improves balance and stability",
+        "Stimulates the heart and diaphragm"],
+      imageUrl:
+        "https://cdn.yogajournal.com/wp-content/uploads/2021/11/Chair-Pose_Andrew-Clark_2400x1350.jpg",
+      angles: {
+        shoulder_angle: [120, 150],
+        knee_angle: [40, 80],
+      },
+    },
+    {
       id: "3",
-      name: "Cobra Pose",
+      name: "Cobra",
       category: "Prone",
       description:
         "A gentle backbend that opens the chest and strengthens the spine.",
@@ -77,7 +74,7 @@ export const usePoseStore = create((set, get) => ({
         "Relieves stress and fatigue",
       ],
       imageUrl:
-        "https://images.pexels.com/photos/6698513/pexels-photo-6698513.jpeg",
+        "https://media.istockphoto.com/id/1225440141/photo/handsome-muscular-athlete-doing-yoga-alone-stretching-in-the-cobra-pose.jpg?s=612x612&w=0&k=20&c=FlRUvgVAv47oF5IPw6aUcZFqeVGnkTTnzw5W4SgMx_w=",
       angles: {
         shoulder_angle: [150, 180],
         elbow_angle: [160, 180],
@@ -85,52 +82,52 @@ export const usePoseStore = create((set, get) => ({
     },
     {
       id: "4",
-      name: "Bow Pose",
-      category: "Prone",
-      description: "An intermediate backbend that opens the front of the body.",
-      difficulty: "intermediate",
+      name: "Warrior",
+      category: "Standing",
+      description:
+        "A powerful standing pose that builds strength and stability.",
+      difficulty: "beginner",
       instructions: [
-        "Lie on your stomach with arms alongside body",
-        "Bend knees and hold ankles with hands",
-        "Inhale and lift chest and thighs off floor",
-        "Look forward and keep breathing normally",
-        "Hold for 20-30 seconds, then exhale and release",
+        "Stand with feet wide apart",
+        "Turn right foot out 90 degrees, left foot slightly in",
+        "Bend right knee over right ankle",
+        "Extend arms parallel to floor, palms down",
+        "Gaze over right hand, hold for 30 seconds",
       ],
       benefits: [
-        "Stretches the entire front of the body",
-        "Strengthens the back muscles",
-        "Improves posture and spinal flexibility",
-        "Stimulates the digestive organs",
+        "Strengthens legs, ankles, and feet",
+        "Opens hips and chest",
+        "Improves concentration and balance",
+        "Stimulates abdominal organs",
       ],
       imageUrl:
-        "https://images.pexels.com/photos/6787207/pexels-photo-6787207.jpeg",
+        "https://www.ommagazine.com/wp-content/uploads/2021/12/MOTM.jpg",
       angles: {
-        shoulder_angle: [120, 150],
-        knee_angle: [40, 80],
+        left_knee_angle: [80, 100],
+        left_elbow_angle: [160, 180],
+        right_elbow_angle: [160, 180],
       },
     },
     {
       id: "5",
-      name: "Cow Face Arms",
-      category: "Seated",
-      description:
-        "A seated pose that deeply stretches the shoulders and chest.",
+      name: "Downward",
+      category: "Standing",
+      description: "A foundational yoga pose that strengthens the entire body and stretches the back, legs, and arms.",
       difficulty: "intermediate",
       instructions: [
-        "Sit comfortably with spine straight",
-        "Raise right arm, bend elbow to reach behind head",
-        "Bring left arm behind back to clasp right hand",
-        "Keep shoulders relaxed and chest open",
-        "Hold for 30 seconds, then switch sides",
+        "Start on your hands and knees in a tabletop position",
+        "Spread your fingers wide and tuck your toes under",
+        "Exhale and lift your hips up and back, straightening your legs",
+        "Press your heels toward the floor and keep your head between your arms",
+        "Hold for 30 seconds to 1 minute while breathing deeply"
       ],
       benefits: [
-        "Stretches shoulders, chest, and upper back",
-        "Improves posture and spinal alignment",
-        "Increases range of motion in the shoulders",
-        "Relieves tension in the upper body",
-      ],
+        "Stretches the hamstrings, calves, and spine",
+        "Strengthens the arms, shoulders, and legs",
+        "Improves circulation and energizes the body",
+        "Calms the mind and relieves stress"],
       imageUrl:
-        "https://images.pexels.com/photos/6787401/pexels-photo-6787401.jpeg",
+        "https://media.istockphoto.com/id/1133155626/photo/young-man-practicing-upward-facing-dog-pose.jpg?s=612x612&w=0&k=20&c=OurrPhYAyU2B2TkhHaspwoZmjGC91LR_l9DxF7pULCc=",
       angles: {
         right_elbow_angle: [70, 100],
         left_elbow_angle: [70, 100],
@@ -138,7 +135,60 @@ export const usePoseStore = create((set, get) => ({
     },
     {
       id: "6",
-      name: "Siddhasana (Adept's Pose)",
+      name: "Shoulderstand",
+      category: "Inversion",
+      description: "An advanced inversion that calms the mind and improves circulation.",
+      difficulty: "advanced",
+      instructions: [
+        "Lie on your back, lift legs over head into Plow pose",
+        "Support lower back with hands",
+        "Lift legs up straight toward the ceiling",
+        "Keep neck relaxed, hold for 30 seconds",
+      ],
+      benefits: [
+        "Stimulates thyroid and parathyroid glands",
+        "Improves digestion and circulation",
+        "Reduces fatigue and calms the mind",
+        "Tones legs and abs",
+      ],
+      imageUrl: "https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg",
+      angles: {
+        neck_angle: [70, 100],
+        hip_angle: [80, 100],
+        knee_angle: [160, 180],
+      },
+    },
+    {
+      id: "7",
+      name: "Triangle",
+      category: "Standing",
+      description: "A standing pose that stretches the legs and torso while improving balance and stability.",
+      difficulty: "beginner",
+      instructions: [
+        "Stand with feet wide apart, about 3-4 feet",
+        "Turn your right foot out 90 degrees and left foot slightly inward",
+        "Extend your arms parallel to the floor, palms facing down",
+        "Inhale, then exhale and reach your right hand toward your right foot",
+        "Place your right hand on your shin, ankle, or the floor, and stretch your left arm toward the ceiling",
+        "Gaze up at your left hand and hold for 30 seconds, then switch sides"
+      ],
+      benefits: [
+        "Stretches the hamstrings, hips, and spine",
+        "Strengthens the legs, knees, and ankles",
+        "Improves balance and stability",
+        "Stimulates digestion and relieves stress"
+      ],
+      imageUrl:
+        "https://lh3.googleusercontent.com/1lFCiwdr0bqa_JDFaYD84M_TfvJ3RYy5mWpV0UfRTU7xWcEtRjbrG8vNowmL9pK1tWUVWng9jDML5TQJzC3i10hKS3JXMACiD_tV8sScPBGBF-Bhybv1Vw55Hvul60Z9pL09cCrP",
+      angles: {
+        left_knee_angle: [70, 120],
+        right_knee_angle: [70, 120],
+        torso_angle: [80, 100],
+      },
+    },
+    {
+      id: "8",
+      name: "Siddhasana",
       category: "Seated",
       description: "A comfortable seated meditation pose.",
       difficulty: "beginner",
@@ -156,7 +206,34 @@ export const usePoseStore = create((set, get) => ({
         "Ideal for meditation practice",
       ],
       imageUrl:
-        "https://images.pexels.com/photos/6698978/pexels-photo-6698978.jpeg",
+        "https://media.graphassets.com/resize=fit:clip,height:350,width:600/hMsLKCdcQJ6FYKxrxV9Z",
+      angles: {
+        left_knee_angle: [70, 120],
+        right_knee_angle: [70, 120],
+        torso_angle: [80, 100],
+      },
+    },
+    {
+      id: "9",
+      name: "Fish",
+      category: "Supine",
+      description: "A gentle backbend that opens the chest and throat while relieving tension in the neck and shoulders.",
+      difficulty: "beginner",
+      instructions: [
+        "Lie on your back with legs extended and arms at your sides",
+        "Slide your hands under your hips, palms facing down",
+        "Press your elbows into the floor and lift your chest upward",
+        "Gently tilt your head back so the crown rests lightly on the floor",
+        "Hold for 30 seconds to 1 minute while breathing deeply, then slowly release"
+      ],
+      benefits: [
+        "Opens the chest, throat, and abdomen",
+        "Relieves tension in the neck and shoulders",
+        "Improves posture and spinal flexibility",
+        "Stimulates the throat and thyroid gland"
+      ],
+      imageUrl:
+        "https://www.theyogatutor.com/templates/0/sapurna-matsya-2.jpg",
       angles: {
         left_knee_angle: [70, 120],
         right_knee_angle: [70, 120],
@@ -164,6 +241,7 @@ export const usePoseStore = create((set, get) => ({
       },
     },
   ],
+
   selectedPose: null,
   isDetecting: false,
   feedback: {},

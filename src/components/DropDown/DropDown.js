@@ -1,45 +1,38 @@
-import {useContext} from 'react'
+import { useContext } from 'react'
 import YogaContext from "../../YogaContext";
-import { poseImages } from '../../utils/pose_images'
-
+import { usePoseStore } from '../../store/poseStore'
 import './DropDown.css'
 
-export default function DropDown({ poseList }) {
+export default function DropDown() {
+    const { poses } = usePoseStore();
+    const { currentPose, setCurrentPosefunc } = useContext(YogaContext);
 
-    const {currentPose,setCurrentPosefunc} = useContext(YogaContext);
-
-return (
+    return (
         <div
-        className='dropdown dropdown-container'
-         
-      >
-        <button 
-            className="btn btn-secondary dropdown-toggle"
-            type='button'
-            data-bs-toggle="dropdown"
-            id="pose-dropdown-btn"
-            aria-expanded="false"
-        >{currentPose}
-        </button>
-        <ul class="dropdown-menu dropdown-custom-menu" aria-labelledby="dropdownMenuButton1">
-            {poseList.map((pose) => (
-                <li onClick={() => setCurrentPosefunc(pose)}>
-                    <div class="dropdown-item-container">
-                        <p className="dropdown-item-1">{pose}</p>
-                        <img 
-                            src={poseImages[pose]}
-                            className="dropdown-img"
-                            alt="yoga_images"
-                        />
-                        
-                    </div>
-                </li>
-            ))}
-            
-        </ul>
-              
-          
-      </div>
+            className='dropdown dropdown-container'
+        >
+            <button
+                className="btn btn-secondary dropdown-toggle"
+                type='button'
+                data-bs-toggle="dropdown"
+                id="pose-dropdown-btn"
+                aria-expanded="false"
+            >{currentPose} Pose
+            </button>
+            <ul class="dropdown-menu dropdown-custom-menu" aria-labelledby="dropdownMenuButton1">
+                {poses.map((pose) => (
+                    <li onClick={() => setCurrentPosefunc(pose.name)}>
+                        <div class="dropdown-item-container">
+                            <p className="dropdown-item-1">{pose.name}</p>
+                            <img
+                                src={pose.imageUrl}
+                                className="dropdown-img"
+                                alt="yoga_images"
+                            />
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }
- 

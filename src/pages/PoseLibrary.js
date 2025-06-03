@@ -31,14 +31,16 @@ const PoseLibrary = () => {
 
     return (
         <div className="space-y-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">Yoga Pose Library</h1>
-                <p className="text-gray-600 mb-6">
+            <div className="bg-white rounded-xl p-6 shadow-sm bg-gradient-to-r from-primary to-secondary">
+                <h1 className="text-5xl font-bold text-gray-900 mb-2 inline-block border-b-4 border-black">
+                    Pose Finder
+                </h1>
+                <p className="text-gray-600 mt-3 mb-6">
                     Explore our collection of yoga poses with detailed instructions and benefits.
                 </p>
 
                 {/* Search and Filters */}
-                <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex flex-col md:flex-row flex-wrap gap-4 mb-8">
                     <div className="relative flex-grow">
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <Search className="h-5 w-5 text-gray-400" />
@@ -55,7 +57,7 @@ const PoseLibrary = () => {
                     <div className="flex gap-4">
                         <div className="relative">
                             <select
-                                className="appearance-none pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
+                                className="appearance-none pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:border-secondary focus:ring-2 focus:ring-secondary bg-white"
                                 value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}
                             >
@@ -96,16 +98,16 @@ const PoseLibrary = () => {
                     {filteredPoses.map((pose) => (
                         <div
                             key={pose.id}
-                            className="pose-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md"
+                            className="pose-card bg-white border border-orange-400 rounded-xl overflow-hidden shadow-sm transform transition-all duration-300 hover:scale-105 hover:bg-orange-50 hover:shadow-lg"
                         >
-                            <div className="h-48 overflow-hidden">
+                            <div className="h-45 overflow-hidden">
                                 <img
                                     src={pose.imageUrl}
                                     alt={pose.name}
-                                    className="w-full h-full object-cover object-center"
+                                    className="w-full object-cover object-center md:h-[190px] sm:h-full lg:h-[280px] transition-transform duration-300 hover:scale-110"
                                 />
                             </div>
-                            <div className="p-5">
+                            <div className="p-4">
                                 <div className="flex justify-between items-start mb-3">
                                     <h3 className="text-xl font-semibold text-gray-900">{pose.name}</h3>
                                     <span
@@ -116,10 +118,12 @@ const PoseLibrary = () => {
                                 </div>
                                 <p className="text-gray-600 mb-3 line-clamp-2">{pose.description}</p>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm text-gray-500">{pose.category}</span>
+                                    <span className="text-sm bg-orange-300 text-black rounded-full px-3 py-0.5">
+                                        {pose.category}
+                                    </span>
                                     <Link
                                         to={`/practice?pose=${pose.id}`}
-                                        className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
+                                        className="inline-flex items-center text-orange-900 hover:text-primary-700 font-medium"
                                     >
                                         Practice <ChevronRight className="h-4 w-4 ml-1" />
                                     </Link>

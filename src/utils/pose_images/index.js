@@ -1,21 +1,20 @@
 import chair from './chair.png'
 import cobra from './cobra.jpg'
-import dog from './dog.jpg'
+import downward from './downward.jpg'
 import tree from './tree.jpg'
 import warrior from './warrior.jpg'
-import traingle from './traingle.jpg'
+import triangle from './triangle.jpg'
 import shoulderstand from './shoulderstand.jpg'
 
 export const poseImages = {
     Tree: tree,
     Cobra: cobra,
-    Dog: dog,
+    Downward: downward,
     Warrior: warrior,
     Chair: chair,
-    Traingle: traingle,
+    Triangle: triangle,
     Shoulderstand: shoulderstand
-} 
+}
 
 
 
- 
