@@ -1,7 +1,7 @@
 import * as poseDetection from "@tensorflow-models/pose-detection";
 import * as tf from "@tensorflow/tfjs";
 import { useRef, useEffect, useContext } from "react";
-import YogaContext from "../../YogaContext"; 
+import YogaContext from "../../YogaContext";
 import { POINTS, keypointConnections } from "../../utils/data";
 import { drawPoint, drawSegment } from "../../utils/helper";
 import Webcam from "react-webcam";
@@ -236,7 +236,14 @@ function YogaCanvas() {
             <h4>Best Time : {bestPerform} s</h4>
           </div>
           <button onClick={stopPose} className="secondary-btn">
-            <Link to="/practice">Stop Pose</Link>
+            <Link
+              to="/practice"
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-[15px] transition-all duration-300 ease-in-out font-medium bg-transparent text-white border hover:bg-transparent hover:text-black hover:border border-black
+                }`}
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Stop Pose
+            </Link>
           </button>
         </div>
         <div className="pose-detection">

@@ -22,7 +22,7 @@ export const usePoseStore = create((set, get) => ({
         "Enhances concentration and focus",
       ],
       imageUrl:
-        "https://cdn.prod.website-files.com/61384703bca2db472ca04cfa/65166404fa404f0e059fa402_HowToDoTreePose.jpg",
+        "https://media.istockphoto.com/id/924163542/photo/young-woman-doing-vrksasana-exercise.jpg?s=612x612&w=0&k=20&c=7nestfhHvnOZsXm_a1vf9x1V3JT_llP7zlvp7isKHVw=",
       angles: {
         left_knee_angle: [30, 70],
         right_knee_angle: [160, 180],
@@ -47,7 +47,7 @@ export const usePoseStore = create((set, get) => ({
         "Improves balance and stability",
         "Stimulates the heart and diaphragm"],
       imageUrl:
-        "https://cdn.yogajournal.com/wp-content/uploads/2021/11/Chair-Pose_Andrew-Clark_2400x1350.jpg",
+        "https://www.yogadownload.com/portals/0/ProductImages/Pose-Pictures/Chair-NEW.jpg",
       angles: {
         shoulder_angle: [120, 150],
         knee_angle: [40, 80],
@@ -74,7 +74,7 @@ export const usePoseStore = create((set, get) => ({
         "Relieves stress and fatigue",
       ],
       imageUrl:
-        "https://media.istockphoto.com/id/1225440141/photo/handsome-muscular-athlete-doing-yoga-alone-stretching-in-the-cobra-pose.jpg?s=612x612&w=0&k=20&c=FlRUvgVAv47oF5IPw6aUcZFqeVGnkTTnzw5W4SgMx_w=",
+        "https://img.freepik.com/free-photo/sporty-young-woman-doing-yoga-practice-isolated-white-background-concept-healthy-life-natural-balance-body-mental-development_231208-8247.jpg",
       angles: {
         shoulder_angle: [150, 180],
         elbow_angle: [160, 180],
@@ -101,7 +101,7 @@ export const usePoseStore = create((set, get) => ({
         "Stimulates abdominal organs",
       ],
       imageUrl:
-        "https://www.ommagazine.com/wp-content/uploads/2021/12/MOTM.jpg",
+        "https://img.freepik.com/free-photo/young-woman-meditating-with-chakras-her-body_23-2149163323.jpg",
       angles: {
         left_knee_angle: [80, 100],
         left_elbow_angle: [160, 180],
@@ -127,7 +127,7 @@ export const usePoseStore = create((set, get) => ({
         "Improves circulation and energizes the body",
         "Calms the mind and relieves stress"],
       imageUrl:
-        "https://media.istockphoto.com/id/1133155626/photo/young-man-practicing-upward-facing-dog-pose.jpg?s=612x612&w=0&k=20&c=OurrPhYAyU2B2TkhHaspwoZmjGC91LR_l9DxF7pULCc=",
+        "https://cdn.create.vista.com/api/media/medium/468524316/stock-photo-side-view-woman-standing-downward-facing-dog-yoga-pose?token=",
       angles: {
         right_elbow_angle: [70, 100],
         left_elbow_angle: [70, 100],
@@ -151,7 +151,7 @@ export const usePoseStore = create((set, get) => ({
         "Reduces fatigue and calms the mind",
         "Tones legs and abs",
       ],
-      imageUrl: "https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg",
+      imageUrl: "https://media.yogauonline.com/app/uploads/2022/04/06031927/0-How-to-practice-Shoulderstand-for-comfort-and-safety-1.webp",
       angles: {
         neck_angle: [70, 100],
         hip_angle: [80, 100],
@@ -179,7 +179,7 @@ export const usePoseStore = create((set, get) => ({
         "Stimulates digestion and relieves stress"
       ],
       imageUrl:
-        "https://lh3.googleusercontent.com/1lFCiwdr0bqa_JDFaYD84M_TfvJ3RYy5mWpV0UfRTU7xWcEtRjbrG8vNowmL9pK1tWUVWng9jDML5TQJzC3i10hKS3JXMACiD_tV8sScPBGBF-Bhybv1Vw55Hvul60Z9pL09cCrP",
+        "https://cdn.prod.website-files.com/61384703bca2db472ca04cfa/63118603949700f63f2e9418_parivrtta-trikonasana-revolved-triangle-pose.jpg",
       angles: {
         left_knee_angle: [70, 120],
         right_knee_angle: [70, 120],
@@ -206,7 +206,7 @@ export const usePoseStore = create((set, get) => ({
         "Ideal for meditation practice",
       ],
       imageUrl:
-        "https://media.graphassets.com/resize=fit:clip,height:350,width:600/hMsLKCdcQJ6FYKxrxV9Z",
+        "https://images.squarespace-cdn.com/content/v1/575eb5f0b654f9dd886d678c/1615131226110-P3J4J8KPGB2DAOJLXY0E/siddhasana.jpg?format=2500w",
       angles: {
         left_knee_angle: [70, 120],
         right_knee_angle: [70, 120],
@@ -233,7 +233,7 @@ export const usePoseStore = create((set, get) => ({
         "Stimulates the throat and thyroid gland"
       ],
       imageUrl:
-        "https://www.theyogatutor.com/templates/0/sapurna-matsya-2.jpg",
+        "https://media.graphassets.com/resize=fit:clip,height:350,width:600/JouBjfmzTVKCjsaevxPj",
       angles: {
         left_knee_angle: [70, 120],
         right_knee_angle: [70, 120],

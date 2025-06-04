@@ -5,8 +5,8 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-black text-[#ebebeb] py-12 mt-16 font-inter">
-            <div className="container mx-auto px-6">
+        <footer className="bg-black text-[#ebebeb] py-12 font-inter">
+            <div className="container mx-auto px-16">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
                     {/* Logo & Brand */}
                     <div className="flex items-center space-x-3">
@@ -22,7 +22,7 @@ const Footer = () => {
                                 <li><a href="/" className="hover:text-white transition">Home</a></li>
                                 <li><a href="/practice" className="hover:text-white transition">Practice</a></li>
                                 <li><a href="/poses" className="hover:text-white transition">Pose Library</a></li>
-                                <li><a href="/profile" className="hover:text-white transition">Profile</a></li>
+                                {/* <li><a href="/profile" className="hover:text-white transition">Profile</a></li> */}
                             </ul>
                         </div>
 

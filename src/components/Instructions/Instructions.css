@@ -39,26 +39,19 @@
   display: flex;
   justify-self: center;
   align-self: center;
-  margin: 10px auto 10px auto;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border-color: rgba(125, 125, 125, 0.5);
-  border-width: 5px;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 0px 0px;
-  color: black;
+  margin: 20px auto 10px auto;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px; 
+}
+
+.secondary-btn-link:hover {
+    border-color: rgba(125, 125, 125, 0.5);
 }
 
 .secondary-btn-link a {
   text-decoration: none;
-  color: black;
-}
-
-.secondary-btn-link:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.secondary-btn-link:hover a {
   color: black;
 }
 

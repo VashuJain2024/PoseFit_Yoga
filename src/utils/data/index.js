@@ -7,8 +7,8 @@ export const poseInstructions = {
             'Stretch your arms straight up toward the ceiling with palms pressed together forming an inverted V.',
             'Hold and repeat. Hold the pose for as long as necessary, making sure to breathe properly. When you’re ready to switch legs, exhale, and return to the pose to start again.'
         ],
-        readMore: 'https://classpass.com/movements/tree-pose',
-        watch: 'https://www.youtube.com/watch?v=JmVxRl5bc4Y'
+        readMore: 'https://en.wikipedia.org/wiki/Tree_pose',
+        watch: 'https://youtu.be/Fr5kiIygm0c?si=SxOTxNW5WEmTXksu'
     },
     Chair: {
         instructions: [
@@ -18,8 +18,8 @@ export const poseInstructions = {
             'Exhale as you bend your knees, keeping your thighs and knees parallel. Lean your torso forward to create a right angle with the tops of your thighs. Keep your neck and head in line with your torso and arms.',
             'Hold for 30 seconds to 1 minute.'
         ],
-        readMore: 'https://classpass.com/movements/chair-pose',
-        watch: 'https://www.youtube.com/watch?v=5F2vBzUQG7E'
+        readMore: 'https://en.wikipedia.org/wiki/Utkatasana',
+        watch: 'https://youtu.be/tEZhXr0FuAQ?si=7_3CzHThIWI56aye'
     },
     Cobra: {
         instructions: [
@@ -29,8 +29,8 @@ export const poseInstructions = {
             'Keep the back of your neck long and focus on lifting your sternum instead of lifting your chin. Straighten your arms while keeping your shoulders away from your ears. Keep at least a slight bend in your elbows.',
             'To exit the pose, release back to your mat.'
         ],
-        readMore: 'https://www.yogajournal.com/poses/cobra-pose-2/',
-        watch: 'https://www.youtube.com/watch?v=JDcdhTuycOI'
+        readMore: 'https://en.wikipedia.org/wiki/Cobra_pose',
+        watch: 'https://youtu.be/UYDTHxVh2EE?si=znDhHVEExAGy7qLX'
     },
     Warrior: {
         instructions: [
@@ -39,8 +39,8 @@ export const poseInstructions = {
             'Move your hands to your heart, with palms pressed against each other in a prayer position. Lean forward until your back leg extends straight back, even with your hips. Keep your foot flexed and your gaze downward.',
             'Make sure your standing leg is strong and straight, but not locked at knee. Reach your arms forward so your body forms a “T” shape.'
         ],
-        readMore: 'https://www.yogajournal.com/poses/warrior-3-pose/',
-        watch: 'https://www.youtube.com/watch?v=fa8G5JvoVhA'
+        readMore: 'https://en.wikipedia.org/wiki/Virabhadrasana',
+        watch: 'https://youtu.be/NytDpa2r34g?si=EPTgHHrJfBo2ZgPu'
     },
     Downward: {
         instructions: [
@@ -50,8 +50,8 @@ export const poseInstructions = {
             'Keep your legs straight and your heels on the mat. Your body should look like an upside-down "V".',
             'Stay in the pose for 10 or more breaths, then bend your knees on an exhalation and lower yourself.'
         ],
-        readMore: 'https://classpass.com/movements/downward-dog',
-        watch: 'https://www.youtube.com/watch?v=0FxZQZ1jagw'
+        readMore: 'https://en.wikipedia.org/wiki/Downward_Dog_Pose',
+        watch: 'https://youtu.be/EC7RGJ975iM?si=FVPpcW0kPdmInjMX'
     },
     Shoulderstand: {
         instructions: [
@@ -63,8 +63,8 @@ export const poseInstructions = {
             'Move your hips toward the front of the room and your feet toward the back of the room to straighten the body. The correct alignment is with the hips over the shoulders and feet over the hips. Ask your teacher or a friend to help you determine if your legs are perpendicular to the floor.',
             'Stay in the pose for up to 10 breaths.'
         ],
-        readMore: 'https://www.verywellfit.com/shoulderstand-salamba-sarvangasana-3567115',
-        watch: 'https://www.youtube.com/watch?v=fm5F3a5qS7I'
+        readMore: 'https://en.wikipedia.org/wiki/Sarvangasana',
+        watch: 'https://youtu.be/9GCoNK8OV_k?si=p--5i2GbzdlB863U'
     },
     Triangle: {
         instructions: [
@@ -73,8 +73,8 @@ export const poseInstructions = {
             'Straighten through your left leg, then hinge and reach your torso over your left leg as your hips jut back. Rotate your left palm so it faces the ceiling, and gaze out over your left arm.',
             'Maintain a long, straight spine as you reach your left hand to the mat, placing it in front of your left foot. If you feel off balance, bring in your back leg closer to shorten your stance. Gaze towards your right arm, which should be extended overhead. Hold and repeat on the other side.'
         ],
-        readMore: 'https://classpass.com/movements/triangle-pose/',
-        watch: 'https://www.youtube.com/watch?v=yWbtp0aYtv8'
+        readMore: 'https://en.wikipedia.org/wiki/Trikonasana',
+        watch: 'https://youtu.be/S6gB0QHbWFE?si=XYhMmB096Rhv22nI'
     },
     Siddhasana: {
         instructions: [
@@ -86,8 +86,8 @@ export const poseInstructions = {
             'Rest your hands on your knees in a mudra of choice (e.g., Chin Mudra), close your eyes, and begin to focus on your breath or mantra. This pose is ideal for meditation and pranayama.',
             'Hold the pose for several minutes, breathing deeply, and switch leg cross for balance if staying longer.'
         ],
-        readMore: 'https://www.yogajournal.com/poses/siddhasana/',
-        watch: 'https://www.youtube.com/watch?v=H1Hgd5vQCK4'
+        readMore: 'https://en.wikipedia.org/wiki/Siddhasana',
+        watch: 'https://youtu.be/0L4WEvybVQg?si=pRQvEuIxgKc4Dh2w'
     },
     Fish: {
         instructions: [
@@ -99,8 +99,8 @@ export const poseInstructions = {
             'Keep your legs active and pressed against the mat. Avoid putting full weight on your head; most of the support should come from your arms.',
             'Hold the pose for 15–30 seconds, breathing slowly and deeply. To release, gently lower your head and back to the mat and slide your hands out from beneath you.'
         ],
-        readMore: 'https://www.yogajournal.com/poses/fish-pose/',
-        watch: 'https://www.youtube.com/watch?v=eyJ3rFTDgMg'
+        readMore: 'https://en.wikipedia.org/wiki/Matsyasana',
+        watch: 'https://youtu.be/0g-gT2pXKcI?si=XUs93FpZq47LV2NX'
     },
 };
 

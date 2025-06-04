@@ -31,7 +31,7 @@ const PoseLibrary = () => {
 
     return (
         <div className="space-y-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm bg-gradient-to-r from-primary to-secondary">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h1 className="text-5xl font-bold text-gray-900 mb-2 inline-block border-b-4 border-black">
                     Pose Finder
                 </h1>

@@ -37,12 +37,26 @@ export default function Instructions() {
             </div>
             <div className="button-container-links">
                 <button className="secondary-btn-link">
-                    <Link to={poseData.readMore} target="_blank" rel="noopener noreferrer">
+                    <Link
+                        to={poseData.readMore}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-[15px] transition-all duration-300 ease-in-out font-black bg-transparent text-black border hover:bg-transparent hover:text-black hover:border border-black
+                    }`}
+                        style={{ fontFamily: "'Playfair Display', serif", fontSize: '20px' }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Read More
                     </Link>
                 </button>
                 <button className="secondary-btn-link">
-                    <Link to={poseData.watch} target="_blank" rel="noopener noreferrer">
+                    <Link
+                        to={poseData.watch}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-[15px] transition-all duration-300 ease-in-out font-black bg-transparent text-black border hover:border hover:border-black
+                    }`}
+                        style={{ fontFamily: "'Playfair Display', serif", fontSize: '20px' }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Watch Video
                     </Link>
                 </button>

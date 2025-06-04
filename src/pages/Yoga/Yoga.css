@@ -17,17 +17,21 @@
 }
 
 .secondary-btn {
-    text-decoration: none;
     display: flex;
     justify-self: center;
     align-self: center;
     margin: 10px auto 10px auto;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border-color: rgba(125, 125, 125, 0.1);
-    border-width: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(125, 125, 125, 0.8);
+    background-color: black;
+    color: white;
+    border-width: 3px;
+    border-radius: 10px;
     box-shadow: 0px 0px 0px 0px;
+}
+
+.secondary-btn:hover {
+    border-color: black;
+    background-color: white;
     color: black;
 }
 
@@ -66,7 +70,7 @@
     width: 45%;
     aspect-ratio: 1;
 }
- 
+
 .performance-container {
     display: flex;
     padding: 20px;
