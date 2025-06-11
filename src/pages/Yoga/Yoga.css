@@ -6,6 +6,13 @@
     overflow: hidden;
 }
 
+.yoga-top {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .yoga-pose-container {
     display: flex;
     justify-content: space-evenly;

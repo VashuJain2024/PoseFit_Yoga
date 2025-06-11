@@ -9,6 +9,7 @@ import YogaCanvas from "./pages/Yoga/YogaCanvas";
 // import Profile from "./pages/Profile";
 
 import "./App.css";
+import YogaWrapper from "./pages/Yoga/YogaWrapper";
 
 export default function App() {
   return (
@@ -17,10 +18,12 @@ export default function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/practice" element={<Yoga />} />
             <Route path="/poses" element={<PoseLibrary />} />
             {/* <Route path="/profile" element={<Profile />} /> */}
-            <Route path="/yoga" element={<YogaCanvas />} />
+            <Route path="/practice" element={<YogaWrapper />}>
+              <Route index element={<Yoga />} />
+              <Route path="yoga" element={<YogaCanvas />} />
+            </Route>
           </Routes>
         </Layout>
       </Router>

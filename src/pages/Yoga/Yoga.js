@@ -14,7 +14,7 @@ function Yoga() {
   const handleClick = () => {
     if (!isDisabled) {
       startYoga(true);
-      navigate("/yoga");
+      navigate("yoga");
     }
   };
 
@@ -29,8 +29,7 @@ function Yoga() {
       <div className="button-container">
         <button
           onClick={handleClick}
-          className={`secondary-btn flex items-center gap-2 px-4 py-2 rounded-md text-[15px] transition-all duration-300 ease-in-out font-black
-                            }`}
+          className="secondary-btn flex items-center gap-2 px-4 py-2 rounded-md text-[15px] transition-all duration-300 ease-in-out font-black"
           disabled={isDisabled}
           style={{
             opacity: isDisabled ? 0.5 : 1,

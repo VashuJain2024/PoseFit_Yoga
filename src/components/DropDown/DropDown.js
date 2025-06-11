@@ -7,6 +7,9 @@ export default function DropDown() {
     const { poses } = usePoseStore();
     const { currentPose, setCurrentPosefunc } = useContext(YogaContext);
 
+    const currentPoseData = poses.find(pose => pose.name === currentPose);
+    // console.log("Current Pose Data:", currentPoseData);
+
     return (
         <div
             className='dropdown dropdown-container'
@@ -17,7 +20,7 @@ export default function DropDown() {
                 data-bs-toggle="dropdown"
                 id="pose-dropdown-btn"
                 aria-expanded="false"
-            >{currentPose} Pose
+            > <strong className='dropdown-title text-lg'>{currentPoseData.name} Pose</strong>
             </button>
             <ul class="dropdown-menu dropdown-custom-menu" aria-labelledby="dropdownMenuButton1">
                 {poses.map((pose) => (
