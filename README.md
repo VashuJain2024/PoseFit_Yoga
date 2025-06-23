@@ -42,4 +42,4 @@ npm start
 
 ## 📽️ Video Demo
 
-[▶️ Watch demo video](https://github.com/your-username/posefit/releases/download/v1.0/demo.mp4)
+[▶️ Watch demo video](https://github.com/VashuJain2024/PoseFit_Yoga/releases/download/Yoga/PoseFit.mp4)
