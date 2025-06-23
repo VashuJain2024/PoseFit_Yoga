@@ -40,4 +40,6 @@ npm start
 
 ---
 
-## 📽️ Demo Link
+## 📽️ Video Demo
+
+[▶️ Watch demo video](https://github.com/your-username/posefit/releases/download/v1.0/demo.mp4)
