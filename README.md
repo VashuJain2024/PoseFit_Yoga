@@ -37,3 +37,7 @@ cd Posefit (Navigate to the project directory)
 npm install
 npm start
 ```
+
+---
+
+## 📽️ Demo Link
