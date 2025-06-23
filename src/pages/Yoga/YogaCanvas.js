@@ -1,12 +1,12 @@
 import * as poseDetection from "@tensorflow-models/pose-detection";
 import * as tf from "@tensorflow/tfjs";
-import { useRef, useEffect, useContext } from "react";
+import { useRef, useEffect, useContext, useState } from "react";
 import YogaContext from "../../YogaContext";
 import { POINTS, keypointConnections } from "../../utils/data";
 import { drawPoint, drawSegment } from "../../utils/helper";
 import Webcam from "react-webcam";
 import { count } from "../../utils/music";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Yoga.css";
 import "./YogaCanvas.css";
 import { usePoseStore } from '../../store/poseStore';
@@ -20,6 +20,8 @@ let skeletonColor = "rgb(255,0,0)";
 let interval;
 
 function YogaCanvas() {
+  const navigate = useNavigate();
+  const [isModelReady, setIsModelReady] = useState(false);
   const {
     stopPose,
     isStartPose,
@@ -132,24 +134,36 @@ function YogaCanvas() {
     return embedding;
   }
 
-  const runMovenet = async () => {
-    const detectorConfig = {
-      modelType: poseDetection.movenet.modelType.SINGLEPOSE_THUNDER,
+  useEffect(() => {
+    let detector, poseClassifier;
+    const loadModels = async () => {
+      const detectorConfig = {
+        modelType: poseDetection.movenet.modelType.SINGLEPOSE_THUNDER,
+      };
+      detector = await poseDetection.createDetector(
+        poseDetection.SupportedModels.MoveNet,
+        detectorConfig
+      );
+      poseClassifier = await tf.loadLayersModel(
+        "https://models.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
+      );
+      const countAudio = new Audio(count);
+      countAudio.loop = true;
+
+      setIsModelReady(true);
+
+      interval = setInterval(() => {
+        detectPose(detector, poseClassifier, countAudio);
+      }, 100);
     };
-    const detector = await poseDetection.createDetector(
-      poseDetection.SupportedModels.MoveNet,
-      detectorConfig
-    );
-    const poseClassifier = await tf.loadLayersModel(
-      "https://models.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
-      // model
-    );
-    const countAudio = new Audio(count);
-    countAudio.loop = true;
-    interval = setInterval(() => {
-      detectPose(detector, poseClassifier, countAudio);
-    }, 100);
-  };
+
+    if (isStartPose) {
+      loadModels();
+    }
+
+    return () => clearInterval(interval);
+  }, [isStartPose]);
+
 
   const detectPose = async (detector, poseClassifier, countAudio) => {
     if (
@@ -222,10 +236,15 @@ function YogaCanvas() {
     }
   };
 
+  useEffect(() => {
+    if (!isStartPose) {
+      navigate("/practice");
+    }
+  }, [isStartPose, navigate]);
+
   const width = window.screen.width;
 
   if (isStartPose) {
-    runMovenet();
     return (
       <div className="yoga-pose-container">
         <div className="performance-container">
@@ -248,29 +267,40 @@ function YogaCanvas() {
         </div>
         <div className="pose-detection">
           <div className="detection-container">
-            <Webcam
-              width={width >= 480 ? "640px" : "360px"}
-              height={width >= 480 ? "480px" : "270px"}
-              id="webcam"
-              className="webcam"
-              ref={webcamRef}
-            />
-            <canvas
-              ref={canvasRef}
-              id="my-canvas"
-              className="my-canvas"
-              width={width >= 480 ? "640px" : "360px"}
-              height={width >= 480 ? "480px" : "270px"}
-            ></canvas>
+            {isModelReady ? (
+              <>
+                <Webcam
+                  width={width >= 480 ? "640px" : "360px"}
+                  height={width >= 480 ? "480px" : "270px"}
+                  id="webcam"
+                  className="webcam"
+                  ref={webcamRef}
+                />
+                <canvas
+                  ref={canvasRef}
+                  id="my-canvas"
+                  className="my-canvas"
+                  width={width >= 480 ? "640px" : "360px"}
+                  height={width >= 480 ? "480px" : "270px"}
+                ></canvas>
+              </>
+            ) : (
+              <div className="loading-wrapper">
+                <p className="loading-text">
+                  Loading model<span className="dot-flash">...</span>
+                </p>
+              </div>
+            )}
           </div>
-
-          <div className="pose-img" >
+          <div className="pose-img">
             <img src={pose[0].imageUrl} alt={pose[0].name} />
           </div>
         </div>
       </div>
     );
   }
+
+  return null;
 }
 
 export default YogaCanvas;
